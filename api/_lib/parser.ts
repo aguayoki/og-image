@@ -13,7 +13,7 @@ export function parseRequest(req: IncomingMessage) {
     if (Array.isArray(theme)) {
         throw new Error('Expected a single theme');
     }
-    
+
     const arr = (pathname || '/').slice(1).split('.');
     let extension = '';
     let text = '';
@@ -31,7 +31,7 @@ export function parseRequest(req: IncomingMessage) {
         text: decodeURIComponent(text),
         theme: theme === 'dark' ? 'dark' : 'light',
         md: md === '1' || md === 'true',
-        fontSize: fontSize || '96px',
+        fontSize: fontSize || '48px',
         images: getArray(images),
         widths: getArray(widths),
         heights: getArray(heights),
@@ -52,13 +52,13 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 
 function getDefaultImages(images: string[], theme: Theme): string[] {
     const defaultImage = theme === 'light'
-        ? 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg'
-        : 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-white.svg';
+        ? 'https://eduardoaguayo.cl/themes/instance/assets/images/icons/favicon.svg'
+        : 'https://eduardoaguayo.cl/themes/instance/assets/images/eduardo-aguayo-logo.svg';
 
     if (!images || !images[0]) {
         return [defaultImage];
     }
-    if (!images[0].startsWith('https://assets.vercel.com/') && !images[0].startsWith('https://assets.zeit.co/')) {
+    if (!images[0].startsWith('https://eduardoaguayo.cl/')) {
         images[0] = defaultImage;
     }
     return images;
