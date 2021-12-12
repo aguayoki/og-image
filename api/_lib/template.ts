@@ -20,7 +20,7 @@ function getCss(theme: string, fontSize: string) {
         background = '#EC008C';
         title = '#f1f2f2';
         text = '#f1f2f2';
-        let direction = 'row-reverse'
+        direction = 'row-reverse'
     }
     return `
     @font-face {

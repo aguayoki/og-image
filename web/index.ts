@@ -142,7 +142,7 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/favicons/favicon.svg' },
+  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/branding/iso-silueta-light.svg' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -192,7 +192,7 @@ const imageLightOptions: DropdownOption[] = [
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/favicons/favicon.svg' },
+  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/branding/iso-silueta-light.svg' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
