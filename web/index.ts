@@ -288,14 +288,14 @@ const App = (_: any, state: AppState, setState: SetState) => {
         setState({ ...newState, loading: true });
     };
     const {
-        fileType = 'jpg',
+        fileType = 'jpeg',
         fontSize = '60px',
         theme = 'light',
         md = true,
         text = 'Título de la **Canción**',
         images=[imageLightOptions[0].value],
-        widths=350,
-        heights=350,
+        widths=[],
+        heights=[],
         showToast = false,
         messageToast = '',
         loading = true,
