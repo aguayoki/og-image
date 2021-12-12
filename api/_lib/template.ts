@@ -80,7 +80,8 @@ function getCss(theme: string, fontSize: string) {
         max-height: 460px;
     }
 
-    .img-wrapper img, .img-wrapper p {margin: 0; padding: 0;}
+    .img-wrapper img {margin: 0; padding: 0;}
+    .img-wrapper p {margin: 4px; padding: 0;}
     `;
 }
 
