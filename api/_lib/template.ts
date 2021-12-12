@@ -7,29 +7,20 @@ const twemoji = require('twemoji');
 const twOptions = { folder: 'svg', ext: '.svg' };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
-const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 const rglr = readFileSync(`${__dirname}/../_fonts/Roboto-Regular.woff2`).toString('base64');
 const bold = readFileSync(`${__dirname}/../_fonts/Roboto-Bold.woff2`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
-    let background = '#E4B418';
-    let title = '#262626';
-    let bgTitle = 'none';
-    let text = 'rgba(0,0,0,.75)'
+    let background = '#00A79D';
+    let title = '#f1f2f2';
+    let text = '#f1f2f2'
 
     if (theme === 'dark') {
-        background = '#4A6B7B';
-        title = '#262626';
-        bgTitle = '#E4B418';
-        text = 'rgba(255,255,255,.75)'
+        background = '#EC008C';
+        title = '#f1f2f2';
+        text = '#f1f2f2'
     }
     return `
-    @font-face {
-        font-family: 'Vera';
-        font-style: normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
-      }
     @font-face {
         font-family: 'Roboto';
         font-style: normal;
@@ -51,88 +42,47 @@ function getCss(theme: string, fontSize: string) {
         align-items: center;
         justify-content: center;
         align-content: center;
+        flex-direction: row;
+        padding: 80px 79px;
     }
 
-    code {
-        color: ${text};
-        font-family: ${mono};
-        white-space: pre-wrap;
-        letter-spacing: -5px;
-    }
-
-    code:before, code:after {
-        content: '\`';
-    }
-
-    .logo-wrapper {
+    .img-wrapper {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        padding: 16px 0px;
+        align-items: flex-end;
         align-content: center;
         justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        color: ${text};
+        font-size: 14px;
+        max-height: 450px;
     }
 
-    svg {
-        color: ${text};
-    }
+    .img-wrapper img, .img-wrapper p {margin: 0; padding: 0;}
 
     .title-wrapper {
       font-size: ${sanitizeHtml(fontSize)};
       display: flex;
       flex-direction: column;
-      align-items: center;
       align-content: center;
-      justify-content: center;
-    }
-
-    .logo {
-        margin: 0 16px;
-    }
-
-    .plus {
-        color: ${text};
-        font-family: 'Roboto', sans-serif;
-        font-size: 100px;
-    }
-
-    .spacer {
-        margin: 150px;
-    }
-
-    .emoji {
-        height: 1em;
-        width: 1em;
-        margin: 0 .05em 0 .1em;
-        vertical-align: -0.1em;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 460px;
     }
 
     .heading {
-        font-family: 'Roboto', sans-serif;
-        font-weight: normal;
-        color: ${title};
-        background: ${bgTitle};
-        padding: 10px 20px;
-        line-height: 120%;
-        max-width: 50vw;
-        margin: 20px 0;
-        font-size: 1em;
+      font-family: 'Roboto', sans-serif;
+      color: ${title};
+      padding: 10px 20px;
+      line-height: 120%;
+      max-width: 40vw;
+      text-align: left;
+      font-weight: normal;
     }
 
-    .heading p {
-      margin: 0;
-      padding: 0;
-    }
-
-    .attribution {
-        font-family: 'Roboto', sans-serif;
-        font-size: .35em;
-        font-weight: normal;
+    svg {
         color: ${text};
-        line-height: 150%;
-        font-size: .5em;
-    }
-
-    .attribution small {
-      font-size: .75em;
     }
     `;
 }
@@ -141,27 +91,23 @@ export function getHtml(parsedReq: ParsedRequest) {
     const { text, theme, md, images, fontSize, widths, heights } = parsedReq;
     return `<html>
         <meta charset="utf-8">
-        <title>Generated Image</title>
+        <title>Edu's Generated Image</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
           ${getCss(theme, fontSize)}
         </style>
         <body>
-            <div>
-                <div class="logo-wrapper">
-                ${images.map((img, i) =>
-                    getPlusSign(i) + getImage(img, widths[i], heights[i])
-                ).join('')}
-            </div>
-            <div class="title-wrapper">
-            <div class="heading">${emojify(
-                md ? marked(text) : sanitizeHtml(text)
-            )}
-            </div>
-            <div class="attribution">
-              eduardoaguayo.cl<br><small>Ilustración: Daily PM</small>
-            </div>
-            </div>
+        <div class="title-wrapper">
+          <div class="heading">${emojify(
+              md ? marked(text) : sanitizeHtml(text)
+          )}</div>
+          <img src="https://eduardoaguayo.cl/assets/brand/logotipo-vertical-responsive.svg" width="100">
+        </div>
+        <div class="img-wrapper">
+        ${images.map((img, i) =>
+            getImage(img, widths[i], heights[i])
+        ).join('')}
+          <p>Daily PM - Noun Project</p>
         </div>
     </body>
 </html>`;
@@ -175,8 +121,4 @@ function getImage(src: string, width ='auto', height = '200') {
         width="${sanitizeHtml(width)}"
         height="${sanitizeHtml(height)}"
     />`
-}
-
-function getPlusSign(i: number) {
-    return i === 0 ? '' : '<div class="plus">+</div>';
 }

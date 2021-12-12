@@ -4,12 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     @font-face {
-        font-family: 'Vera';
-        font-style: normal;
-        font-weight: normal;
-        src: url("_fonts/Vera-Mono.woff2")  format("woff2");
-      }
-    @font-face {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: normal;
@@ -23,94 +17,63 @@
       }
 
     body {
-        background: #4A6B7B;
+        background: #00A79D;
         height: 100vh;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
-        align-content: center;
+        flex-direction: row;
+        padding: 80px 79px;
     }
 
-    code {
-        color: #fff;
-        font-family: 'Vera';
-        white-space: pre-wrap;
-        letter-spacing: -5px;
-    }
-
-    code:before, code:after {
-        content: '\`';
-    }
-
-    .logo-wrapper {
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-    }
-    .title-wrapper {
-        font-size: 48px;
+    .img-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        padding: 16px 0px;
+        align-items: flex-end;
         align-content: center;
         justify-content: center;
-        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        color: #F1F2F2;
+        font-size: 14px;
+        max-height: 450px;
     }
 
-    .logo {
-        margin: 0 16px;
+    .img-wrapper img, .img-wrapper p {margin: 0; padding: 0;}
+
+    .title-wrapper {
+        font-size: 64px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 460px;
     }
 
-    .plus {
-        color: #BBB;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 100px;
-    }
-
-    .spacer {
-        margin: 150px;
-    }
-
-    .emoji {
-        height: 1em;
-        width: 1em;
-        margin: 0 .05em 0 .1em;
-        vertical-align: -0.1em;
-    }
     .heading {
         font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        color: #262626;
-        background: #E4B418;
+        color: #F1F2F2;
         padding: 10px 20px;
         line-height: 120%;
         max-width: 40vw;
-    }
-    .attribution {
-        font-family: 'Roboto', sans-serif;
-        font-size: .5em;
+        text-align: left;
         font-weight: normal;
-        color: rgba(255,255,255,.75);
-        padding: 16px 0;
-        line-height: 150%;
+    }
+    svg {
+      fill: #F1F2F2;
     }
     </style>
+
     <body>
-        <div>
-            <div class="logo-wrapper">
-              <img src="https://eduardoaguayo.cl/themes/instance/assets/images/motivation-icon.svg" width="200" height="200">
-            </div>
-            <div class="title-wrapper">
-            <div class="heading">
-              Guía: Comenzando con UX Research
-            </div>
-            <div class="attribution">
-              eduardoaguayo.cl<br><small>Ilustración: Daily PM</small>
-            </div>
+          <div class="title-wrapper">
+            <div class="heading">Guía: Comenzando con UX Research</div>
+            <img src="file:///Users/eduardo/Dropbox/Proyectos%20Edo/Web/assets/brand/logotipo-vertical-responsive.svg" width="100">
           </div>
-        </div>
+          <div class="img-wrapper">
+            <img src="https://eduardoaguayo.cl/assets/dailypm-ux-workshop/workshop-light.svg" width="360">
+            <p>Daily PM - Noun Project</p>
+          </div>
     </body>
 </html>
