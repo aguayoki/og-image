@@ -71,7 +71,7 @@ function getCss(theme: string, fontSize: string) {
     .img-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         align-content: center;
         justify-content: center;
         font-family: 'Roboto', sans-serif;
