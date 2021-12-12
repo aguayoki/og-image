@@ -142,7 +142,7 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-  { text: 'EA', value: 'https://eduardoaguayo.cl/themes/instance/assets/images/icons/favicon.svg' },
+  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/favicons/favicon.svg' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-dark.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-dark.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-dark.svg' },
@@ -192,7 +192,7 @@ const imageLightOptions: DropdownOption[] = [
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-  { text: 'EA', value: 'https://eduardoaguayo.cl/themes/instance/assets/images/eduardo-aguayo-logo.svg' },
+  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/favicons/favicon.svg' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -465,7 +465,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                         label: `Add Image ${images.length + 1}`,
                         onclick: () => {
                             const nextImage = images.length === 1
-                                ? 'https://cdn.jsdelivr.net/gh/remojansen/logo.ts@master/ts.svg'
+                                ? 'https://eduardoaguayo.cl/assets/favicons/favicon.svg'
                                 : '';
                             setLoadingState({ images: [...images, nextImage] })
                         }

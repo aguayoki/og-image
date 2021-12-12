@@ -52,8 +52,8 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 
 function getDefaultImages(images: string[], theme: Theme): string[] {
     const defaultImage = theme === 'light'
-        ? 'https://eduardoaguayo.cl/themes/instance/assets/images/icons/favicon.svg'
-        : 'https://eduardoaguayo.cl/themes/instance/assets/images/eduardo-aguayo-logo.svg';
+        ? 'https://eduardoaguayo.cl/assets/favicons/favicon.svg'
+        : 'https://eduardoaguayo.cl/assets/favicons/favicon.svg';
 
     if (!images || !images[0]) {
         return [defaultImage];
