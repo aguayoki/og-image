@@ -13,12 +13,14 @@ const bold = readFileSync(`${__dirname}/../_fonts/Roboto-Bold.woff2`).toString('
 function getCss(theme: string, fontSize: string) {
     let background = '#00A79D';
     let title = '#f1f2f2';
-    let text = '#f1f2f2'
+    let text = '#f1f2f2';
+    let direction = 'row'
 
     if (theme === 'dark') {
         background = '#EC008C';
         title = '#f1f2f2';
-        text = '#f1f2f2'
+        text = '#f1f2f2';
+        let direction = 'row-reverse'
     }
     return `
     @font-face {
@@ -40,7 +42,7 @@ function getCss(theme: string, fontSize: string) {
         text-align: center;
         align-items: center;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: ${direction};
         padding: 80px;
     }
 

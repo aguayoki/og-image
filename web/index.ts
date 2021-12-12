@@ -288,14 +288,14 @@ const App = (_: any, state: AppState, setState: SetState) => {
         setState({ ...newState, loading: true });
     };
     const {
-        fileType = 'png',
-        fontSize = '48px',
+        fileType = 'jpg',
+        fontSize = '60px',
         theme = 'light',
         md = true,
-        text = '**Eduardo** Aguayo',
+        text = 'Título de la **Canción**',
         images=[imageLightOptions[0].value],
-        widths=[],
-        heights=[],
+        widths=350,
+        heights=350,
         showToast = false,
         messageToast = '',
         loading = true,
@@ -465,7 +465,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                         label: `Add Image ${images.length + 1}`,
                         onclick: () => {
                             const nextImage = images.length === 1
-                                ? 'https://eduardoaguayo.cl/assets/favicons/favicon.svg'
+                                ? 'https://eduardoaguayo.cl/assets/branding/iso-silueta-light.svg'
                                 : '';
                             setLoadingState({ images: [...images, nextImage] })
                         }
