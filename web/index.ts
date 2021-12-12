@@ -142,7 +142,6 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-  { text: 'Edu', value: 'https://eduardoaguayo.cl/assets/brand/edu-green.png' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -192,7 +191,6 @@ const imageLightOptions: DropdownOption[] = [
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-  { text: 'Edu', value: 'https://eduardoaguayo.cl/assets/brand/edu-pink.png' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -465,7 +463,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                         label: `Add Image ${images.length + 1}`,
                         onclick: () => {
                             const nextImage = images.length === 1
-                                ? 'https://eduardoaguayo.cl/assets/brand/edu-bn.png'
+                                ? 'https://eduardoaguayo.cl/assets/brand/iso-silueta-light.png'
                                 : '';
                             setLoadingState({ images: [...images, nextImage] })
                         }
