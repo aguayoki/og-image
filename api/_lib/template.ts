@@ -50,7 +50,7 @@ function getCss(theme: string, fontSize: string) {
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      width: 470px;
+      width: 50vw;
       height: 460px;
     }
 
@@ -63,7 +63,7 @@ function getCss(theme: string, fontSize: string) {
     }
 
     svg {
-        color: ${text};
+        fill: ${text};
     }
 
     .img-wrapper {
