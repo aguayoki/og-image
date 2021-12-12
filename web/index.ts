@@ -142,7 +142,7 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/branding/iso-silueta-light.svg' },
+  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/brand/iso-silueta-light.svg' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -192,7 +192,7 @@ const imageLightOptions: DropdownOption[] = [
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/branding/iso-silueta-light.svg' },
+  { text: 'EA', value: 'https://eduardoaguayo.cl/assets/brand/iso-silueta-light.svg' },
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -242,6 +242,7 @@ const imageDarkOptions: DropdownOption[] = [
 ];
 
 const widthOptions = [
+    { text: '350', value: '350' },
     { text: 'width', value: 'auto' },
     { text: '50', value: '50' },
     { text: '100', value: '100' },
@@ -249,10 +250,11 @@ const widthOptions = [
     { text: '200', value: '200' },
     { text: '250', value: '250' },
     { text: '300', value: '300' },
-    { text: '350', value: '350' },
+
 ];
 
 const heightOptions = [
+    { text: '350', value: '350' },
     { text: 'height', value: 'auto' },
     { text: '50', value: '50' },
     { text: '100', value: '100' },
@@ -260,7 +262,6 @@ const heightOptions = [
     { text: '200', value: '200' },
     { text: '250', value: '250' },
     { text: '300', value: '300' },
-    { text: '350', value: '350' },
 ];
 
 interface AppState extends ParsedRequest {
