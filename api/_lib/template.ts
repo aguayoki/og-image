@@ -20,7 +20,7 @@ function getCss(theme: string, fontSize: string) {
         background = '#EC008C';
         title = '#f1f2f2';
         text = '#f1f2f2';
-        direction = 'row-reverse'
+        direction = 'row'
     }
     return `
     @font-face {
@@ -80,7 +80,7 @@ function getCss(theme: string, fontSize: string) {
         max-height: 460px;
     }
 
-    .img-wrapper img, .img-wrapper p {margin: 0; padding: 0;}
+    .img-wrapper img {margin: 0; padding: 0;}
     `;
 }
 
@@ -104,7 +104,6 @@ export function getHtml(parsedReq: ParsedRequest) {
         ${images.map((img, i) =>
             getImage(img, widths[i], heights[i])
         ).join('')}
-          <p>Daily PM - Noun Project</p>
         </div>
     </body>
 </html>`;
