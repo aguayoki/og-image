@@ -36,47 +36,28 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: ${background};
-        height: 100vh;
         display: flex;
         text-align: center;
         align-items: center;
-        justify-content: center;
-        align-content: center;
+        justify-content: space-between;
         flex-direction: row;
-        padding: 80px 79px;
+        padding: 80px;
     }
-
-    .img-wrapper {
-        display: flex;
-        flex-direction: column;
-        padding: 16px 0px;
-        align-items: flex-end;
-        align-content: center;
-        justify-content: center;
-        font-family: 'Roboto', sans-serif;
-        color: ${text};
-        font-size: 14px;
-        max-height: 450px;
-    }
-
-    .img-wrapper img, .img-wrapper p {margin: 0; padding: 0;}
 
     .title-wrapper {
       font-size: ${sanitizeHtml(fontSize)};
       display: flex;
       flex-direction: column;
-      align-content: center;
       justify-content: space-between;
       align-items: flex-start;
+      width: 470px;
       height: 460px;
     }
 
     .heading {
       font-family: 'Roboto', sans-serif;
       color: ${title};
-      padding: 10px 20px;
       line-height: 120%;
-      max-width: 40vw;
       text-align: left;
       font-weight: normal;
     }
@@ -84,6 +65,20 @@ function getCss(theme: string, fontSize: string) {
     svg {
         color: ${text};
     }
+
+    .img-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        color: ${text};
+        font-size: 14px;
+        max-height: 460px;
+    }
+
+    .img-wrapper img, .img-wrapper p {margin: 0; padding: 0;}
     `;
 }
 
