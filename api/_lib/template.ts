@@ -17,7 +17,7 @@ function getCss(theme: string, fontSize: string) {
     let direction = 'row'
 
     if (theme === 'dark') {
-        background = '#EC008C';
+        background = 'linear-gradient(90deg, #BC1B5B 0%, #342978 100%)';
         title = '#f1f2f2';
         text = '#f1f2f2';
         direction = 'row-reverse'
