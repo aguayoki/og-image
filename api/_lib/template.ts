@@ -16,19 +16,7 @@ function getCss(theme: string, fontSize: string) {
     let text = '#f1f2f2';
     let direction = 'row'
 
-    if (theme === 'green-reverse') {
-        background = '#00A79D';
-        title = '#f1f2f2';
-        text = '#f1f2f2';
-        direction = 'row-reverse'
-    }
-    if (theme === 'pink') {
-        background = '#EC008C';
-        title = '#f1f2f2';
-        text = '#f1f2f2';
-        direction = 'row'
-    }
-    if (theme === 'pink-reverse') {
+    if (theme === 'dark') {
         background = '#EC008C';
         title = '#f1f2f2';
         text = '#f1f2f2';

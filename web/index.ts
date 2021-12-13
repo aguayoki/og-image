@@ -121,10 +121,8 @@ const Toast = ({ show, message }: ToastProps) => {
 }
 
 const themeOptions: DropdownOption[] = [
-    { text: 'Green', value: 'green' },
-    { text: 'Neerg', value: 'green-reverse' },
-    { text: 'Pink', value: 'pink' },
-    { text: 'Knip', value: 'pink-reverse' },
+    { text: 'Light', value: 'light' },
+    { text: 'Dark', value: 'dark' },
 ];
 
 const fileTypeOptions: DropdownOption[] = [
@@ -144,6 +142,55 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
+  { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
+  { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
+  { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
+  { text: 'motivation', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/motivation-light.svg' },
+  { text: 'approach', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/approach-light.svg' },
+  { text: 'workshop', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/workshop-light.svg' },
+  { text: 'sticky-notes', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/sticky-notes-light.svg' },
+  { text: 'user-journey', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-journey-light.svg' },
+  { text: 'wireframe', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/wireframe-light.svg' },
+  { text: 'user-needs', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-needs-light.svg' },
+  { text: 'presentation', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/presentation-light.svg' },
+  { text: 'summary-report', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/summary-report-light.svg' },
+  { text: 'write-notes', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/write-notes-light.svg' },
+  { text: 'persona', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/persona-light.svg' },
+  { text: 'strategy', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/strategy-light.svg' },
+  { text: 'user-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-testing-light.svg' },
+  { text: 'question', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/question-light.svg' },
+  { text: 'stopwatch', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/stopwatch-light.svg' },
+  { text: 'steps', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/steps-light.svg' },
+  { text: 'goal', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/goal-light.svg' },
+  { text: 'meeting', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/meeting-light.svg' },
+  { text: 'prioritise', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/prioritise-light.svg' },
+  { text: 'roadmap', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/roadmap-light.svg' },
+  { text: 'post-it', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/post-it-light.svg' },
+  { text: 'painpoint', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/painpoint-light.svg' },
+  { text: 'task-analysis', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/task-analysis-light.svg' },
+  { text: 'draft', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/draft-light.svg' },
+  { text: 'planning', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/planning-light.svg' },
+  { text: 'client', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/client-light.svg' },
+  { text: 'solution', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/solution-light.svg' },
+  { text: 'design-thinking', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/design-thinking-light.svg' },
+  { text: 'competitors', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/competitors-light.svg' },
+  { text: 'problem', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/problem-light.svg' },
+  { text: 'problem-solving', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/problem-solving-light.svg' },
+  { text: 'idea', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/idea-light.svg' },
+  { text: 'user-research', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-research-light.svg' },
+  { text: 'product-design', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/product-design-light.svg' },
+  { text: 'development', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/development-light.svg' },
+  { text: 'product-phasing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/product-phasing-light.svg' },
+  { text: 'mindmap', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/mindmap-light.svg' },
+  { text: 'timeline', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/timeline-light.svg' },
+  { text: 'organize', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/organize-light.svg' },
+  { text: 'interview', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/interview-light.svg' },
+  { text: 'discovery', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/discovery-light.svg' },
+  { text: 'brainstorm', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/brainstorm-light.svg' },
+  { text: 'kickoff', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/kickoff-light.svg' }
+];
+
+const imageDarkOptions: DropdownOption[] = [
   { text: 'user-story', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/user-story-light.svg' },
   { text: 'marker-pens', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/marker-pens-light.svg' },
   { text: 'usability-testing', value: 'https://eduardoaguayo.cl/assets/dailypm-ux-workshop/usability-testing-light.svg' },
@@ -241,7 +288,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
     const {
         fileType = 'png',
         fontSize = '60px',
-        theme = 'green',
+        theme = 'light',
         md = true,
         text = 'Título de la **Canción**',
         images=[imageLightOptions[0].value],
@@ -254,7 +301,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         overrideUrl = null,
     } = state;
     const mdValue = md ? '1' : '0';
-    const imageOptions = imageLightOptions;
+    const imageOptions = theme === 'light' ? imageLightOptions : imageDarkOptions;
     const url = new URL(window.location.origin);
     url.pathname = `${encodeURIComponent(text)}.${fileType}`;
     url.searchParams.append('theme', theme);
@@ -281,7 +328,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                         options: themeOptions,
                         value: theme,
                         onchange: (val: Theme) => {
-                            const options = imageLightOptions;
+                            const options = val === 'light' ? imageLightOptions : imageDarkOptions
                             let clone = [...images];
                             clone[0] = options[selectedImageIndex].value;
                             setLoadingState({ theme: val, images: clone });
