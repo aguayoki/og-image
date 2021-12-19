@@ -24,7 +24,7 @@ function getCss(theme: string, fontSize: string) {
         direction = 'row-reverse'
     }
 
-    if (fontSize === '84px'){
+    if (sanitizeHtml(fontSize) === '84px'){
         display = "hidden"
     }
 
