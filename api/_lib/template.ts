@@ -14,7 +14,8 @@ function getCss(theme: string, fontSize: string) {
     let background = '#00A79D';
     let title = '#f1f2f2';
     let text = '#f1f2f2';
-    let direction = 'row'
+    let direction = 'row';
+    let display = 'block'
 
     if (theme === 'dark') {
         background = 'linear-gradient(90deg, #BC1B5B 0%, #342978 100%)';
@@ -22,6 +23,11 @@ function getCss(theme: string, fontSize: string) {
         text = '#f1f2f2';
         direction = 'row-reverse'
     }
+
+    if (fontSize === '84px'){
+        display = "hidden"
+    }
+
     return `
     @font-face {
         font-family: 'Roboto';
@@ -64,6 +70,10 @@ function getCss(theme: string, fontSize: string) {
       font-weight: normal;
     }
 
+    #ealogo {
+      display: ${display};
+    }
+
     svg {
         fill: ${text};
     }
@@ -99,7 +109,7 @@ export function getHtml(parsedReq: ParsedRequest) {
           <div class="heading">${emojify(
               md ? marked(text) : sanitizeHtml(text)
           )}</div>
-          <img src="https://eduardoaguayo.cl/assets/brand/logotipo-vertical-responsive.svg" width="100">
+          <img id="ealogo" src="https://eduardoaguayo.cl/assets/brand/logotipo-vertical-responsive.svg" width="100">
         </div>
         <div class="img-wrapper">
         ${images.map((img, i) =>
